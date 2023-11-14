@@ -13,7 +13,7 @@ const App = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [product, setProduct] = useState({
     title: "",
-    description: '',
+    description: "",
     price: 0,
   });
 
@@ -41,8 +41,7 @@ const[selectedProductId,setSelectedProductId]=useState<number | null>(null);
   };
 
   const createNewProduct = async (product: { title: string; description: String ; price: number }) => {
-    try {
-      const response = await axios.post(
+    try { await axios.post(
         "http://localhost:8000/products",
         product
       );
@@ -121,7 +120,7 @@ if(isEdit){
         />
         <input
           type="text"
-          placeholder="Enter the price of the product"
+          placeholder="Enter the description of the product"
           name="description"
           value={product.description}
           onChange={handleChange}

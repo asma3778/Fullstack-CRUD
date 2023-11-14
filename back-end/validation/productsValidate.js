@@ -5,10 +5,16 @@ export const productValidator = () => {
 };
 
 export const validateProduct = [
-  check("name")
+  check("title")
     .trim()
     .notEmpty()
     .withMessage("Product Name is required")
+    .isLength({ min: 3, max: 200 })
+    .withMessage("Product Name should be 3-200 characters long"),
+  check("description")
+    .trim()
+    .notEmpty()
+    .withMessage("Product description is required")
     .isLength({ min: 3, max: 200 })
     .withMessage("Product Name should be 3-200 characters long"),
   check("price")
