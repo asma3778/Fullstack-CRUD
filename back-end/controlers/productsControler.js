@@ -13,6 +13,12 @@ let products = [
     },
     {
       "id": 3,
+      "title": "Gameing",
+      "description": "Next-gen gaming console for immersive gameplay.",
+      "price": 900
+    },
+    {
+      "id": 4,
       "title": "Tablet",
       "description": "Compact and powerful tablet for work and entertainment.",
       "price": 3000
